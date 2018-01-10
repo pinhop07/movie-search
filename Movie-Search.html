@@ -1,0 +1,140 @@
+<!-- CinemaTix Site
+      Project 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Discover Movies</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body class="black">
+<!-- Main content -->
+  <div class="row">
+  	<div class="col s12 m4 l3" id="intro">
+  		<p>Travel to the realm of the Movieverse and use the powers of the all seeing Eye of Agamotto to reveal all your favorite Movies and TV shows!</p>
+  	</div>
+  </div>
+  <div class="row">
+		<!-- Search/Discover Forms -->
+    <div class="col s12 m4 l3" id="search-movie">
+      <h3 class="white-text" id="discover-font">Discover Movies</h3>
+			<!-- Search/Discover Tabs -->
+      <div class="col s12">
+        <ul class="tabs white-text">
+          <li class="tab col s6"><a class="active white-text" href="#search">Search</a></li>
+          <li class="tab col s6"><a class="white-text" href="#discover">Discover</a></li>
+        </ul>
+      </div>
+			<!-- Search Form -->
+      <div id="search" class="col s12">
+        <div class="input-field col s12">
+          <label>Search term</label>
+          <input class="white-text" placeholder="Enter your search" id="search-phrase" type="text">
+					<!-- Search button -->
+          <button id="search-button" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
+          	<i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+			<!-- Discover Form -->
+      <div id="discover" class="col s12">
+        <div class="input-field col s12 white-text">
+					<!-- Sort by -->          
+          <select id="sort">
+            <option value="" disabled selected>Choose one</option>
+            <option value="popularity.desc">Most popular</option>
+            <option value="popularity.asc">Least popular</option>
+            <option value="release_date.asc">Oldest</option>
+            <option value="release_date.desc">Newest</option>
+            <option value="original_title.asc">Alphabetical order (A-Z)</option>
+            <option value="original_title.desc">Alphabetical order (Z-A)</option>
+          </select>
+          <label>Sort by</label>
+        </div>
+ 				 <!-- Genre -->           
+        <div class="input-field col s12 white-text">
+          <select multiple id="genre">
+            <option value="" disabled selected>Choose any</option>
+            <option value="28">Action</option>
+            <option value="35">Comedy</option>
+            <option value="99">Documentary</option>
+            <option value="27">Horror</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="53">Thriller</option>
+          </select>
+          <label>Genre</label>
+        </div>
+  			<!-- Release Year -->
+        <label id="rel-year" class="col sm10 center">Release Year</label>   
+        <div class="col s10 offset-s1" id="slider-snap"></div>
+        <div class="col s10 offset-s1">
+          <span class="left white-text" id="slider-snap-value-lower"></span>
+          <span class="right white-text" id="slider-snap-value-upper"></span>
+        </div>
+        <br>
+        <br>
+  			<!-- With Actor -->
+        <div class="input-field col s12">
+          <input class="white-text" placeholder="(optional)" id="actor" type="text">
+          <label for="actor">Actor</label>
+        </div>
+  			<!-- Discover button -->
+        <button id="discover-submit" class="btn waves-effect waves-light col s6 offset-s3" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+      
+		<!-- Spacer div with modal content -->
+    <div class="col m1 l1">
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Oops!</h4>
+          <p>You need to enter in a valid search term!</p>
+        </div>
+        <div class="modal-footer">
+          <a id="modal-close" class="modal-action modal-close waves-effect waves-red btn-flat">Okay</a>
+        </div>
+      </div>
+    </div>
+		<!-- Movie Results div -->
+    <div id="discover-results" class="col s12 m7 l8 grey">
+				<!-- Collapsible list where movies will populate -->        
+        <ul id="movies" class = "collapsible popout" data-collapsible = "accordion">
+        </ul>
+				<!-- Next/Prev?Current page # for search results -->
+        <div id="search-change">
+          <a href="" id="search-btn-prev">Prev</a>
+          PAGE: <span class="page"></span>
+          <a href="" id="search-btn-next">Next</a>
+        </div>
+				<!-- Next/Prev?Current page # for discover results -->
+        <div id="discover-change">
+          <a href="" id="discover-btn-prev">Prev</a>
+          PAGE: <span class="page"></span>
+          <a href="" id="discover-btn-next">Next</a>
+        </div>
+    </div>
+  </div>  
+
+	<!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/nouislider.js"></script>
+  <script src="js/wNumb.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/discSlider.js"></script>
+</body>
+</html>

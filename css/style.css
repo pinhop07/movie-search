@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Heros";
+    src: url(../fonts/hero.ttf) format("truetype");
+}
+
+body {
+	background: url("../img/sanctum-sanctorum.jpg")no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Heros", sans-serif;
+  color: white;
+}
+
+/* Classes */
+.tabs {
+  margin-bottom: 10px;
+  background-color: rgba(220,20,60,0.5) !important;
+} 
+.tab {
+  color: rgba(0,0,0,1) !important;
+}
+.noUi-handle {
+  color: red;
+  margin-top: 5px !important;
+  height: 20px !important;
+}
+.noUi-horizontal.noUi-extended {
+  padding-right: 32px;
+}
+.noUi-horizontal.noUi-extended .noUi-handle {
+  left: -1px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin {
+  right: -32px;
+}
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px !important;
+  background-color: #990000  !important;
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+.collapsible-header .movie {
+  background-color: rgba(220,20,60,0.5) !important;
+  font-family: Bangers;
+}
+.accordion-head-text{
+  font-family: Bangers !important;
+  font-size: 30px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collapsible-body p {
+  color: white !important;
+}
+.ticket-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page {
+  font-family: Bangers;
+}
+
+/* ID's */
+#intro{
+	background: white;
+	color: black;
+	border: 3px solid #444;
+	margin-top: 5px;
+	margin-left: 50px;
+}
+#slider-snap-value-lower,
+#slider-snap-value-upper {
+  margin-top: 10px;
+}
+#rel-year {
+  margin-bottom: 10px;
+}
+#search-movie {
+  background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 50px;
+  border-radius: 10px !important;
+}
+#discover-submit,
+#search-button {
+  margin-bottom: 10px !important;
+}
+#discover-results {
+  border-radius: 10px !important;
+  background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 20px !important;
+}
+#movies {
+  background-color: black !important;
+  border-radius: 10px !important;
+}
+#discover-font {
+  font-family: Bangers;
+  text-align: center !important;
+}
+#discover-change,
+#search-change {
+  text-align: center !important;
+}
+#discover-btn-prev,
+#discover-btn-next,
+#search_btn_prev,
+#search_btn_next {
+  font-family: Bangers;
+  margin-left: 5px !important;
+}
+
+/* Media Queries */
+/* 601px <= Screen <= 992px  */
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  
+  #search-movie,
+  #register-form {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+  
+  .my-card {
+    width: 22vw !important;
+  }
+
+  #discover-results{
+    width: 100vw;
+  }
+}
+
+/* Screen <= 600px */
+@media only screen and (max-width : 620px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  .our-logo {
+    height: 50px !important;
+    width: 232px !important;
+    margin-right: 25px !important;  
+  }
+
+  #register-form {
+    width: 90vw;
+  }
+
+  #search-movie {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+
+  .my-card {
+    width: 85vw !important;
+  }
+
+  #username-display {
+    font-size: 50px !important;
+  }
+}
